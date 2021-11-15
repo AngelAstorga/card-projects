@@ -1,0 +1,86 @@
+body{
+    margin:0;
+    padding: 0;
+    width: 100vw;
+    height:100vh;
+    background-color: rgb(16, 14, 25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: 'Oopen Sans', 'Arial Narrow', Arial, sans-serif;
+
+}
+.container{
+    width: inherit;
+    height: 275px;
+    background-color: rgb(20, 18, 26);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    color:  rgb(240, 244, 235);;
+    background-color: rgb(23, 21, 30);
+    width: 175px;
+    height: 245px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+}
+.card__date{
+    display: block;
+    height: 13px;
+    font-size: 12px;
+    color:  rgb(50, 49, 71);
+}
+.card__description{
+    height: 110px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.card__authorInfo{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "a b"
+    "a c"
+    ;
+}
+.card__imageAuthor{
+    border-radius: 50%;
+    grid-area: a;
+}
+.card__nameProject{
+    color:  rgb(84, 83, 107);
+    font-size: 11px;
+    grid-area: b;
+    align-self: flex-end;
+    padding-bottom: 2px;
+}
+.card__authorProject{
+    font-size: 13px;
+    grid-area: c;
+    align-self: flex-start;
+    padding-top: 2px;
+
+}
+.card__technologies{
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+.card__technology{    
+    border: rgb(247, 255, 176) solid 1px;
+    padding: 3px 10px;
+    border-radius: 25px;
+    min-width: 20px;
+    max-width: 100px;
+    font-size: 10px;
+    text-align: center;    
+}
