@@ -18,16 +18,29 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 700px; 
+    margin-left: 175px;
 }
 
 .card{
-    color:  rgb(240, 244, 235);;
+    cursor: pointer;
+    color:  rgb(240, 244, 235);
     background-color: rgb(23, 21, 30);
     width: 175px;
     height: 245px;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 0 10px black;
+    transition-duration: 2s;
+    transform-origin: left;
+    transform:translateX(calc(var(--i)*-35px)) rotateY(13deg);
+
+    /* transform-origin: 0 0;
+    transform: rotateY(25deg); */
+}
+.card:hover{
+    transform-origin: left; 
+    transform: translateX(calc(var(--i)*-35px + (-85px)));
 }
 .card__date{
     display: block;
